@@ -3,7 +3,7 @@
     <div class="w-full items-center flex justify-between">
       <div class="w-fit">
         <NuxtLink class="flex items-center !no-underline" to="/#">
-          <img class="w-20 pr-4" src="#" alt="UACEF Logo">
+          <img class="w-20 pr-4" src="#" alt="Mayworks Logo">
           <span class="text-2xl text-blue-900 font-semibold">Mayworks</span>
         </NuxtLink>
       </div>
@@ -15,11 +15,11 @@
       </div>
     </div>
     <div v-if="isOpen" class="text-base flex flex-col items-center justify-between">
-      <NuxtLink class="py-4 no-underline   hover:decoration-4 font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/">Home</NuxtLink>
-      <NuxtLink class="py-4 no-underline   hover:decoration-4 font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/about">About</NuxtLink>
-      <NuxtLink class="py-4 no-underline   hover:decoration-4 font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/causes">Causes</NuxtLink>
-      <NuxtLink class="py-4 no-underline   hover:decoration-4 font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/gallery">Gallery</NuxtLink>
-      <NuxtLink class="py-4 no-underline   hover:decoration-4 font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/contact">Contact</NuxtLink>
+      <NuxtLink class="py-4 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/">Home</NuxtLink>
+      <NuxtLink class="py-4 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/about">About</NuxtLink>
+      <NuxtLink class="py-4 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/causes">Causes</NuxtLink>
+      <NuxtLink class="py-4 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/gallery">Gallery</NuxtLink>
+      <NuxtLink class="py-4 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/contact">Contact</NuxtLink>
     </div>
   </div>
 </template>
