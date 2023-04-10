@@ -4,5 +4,6 @@
     <HomeAbout />
     <HomeServices />
     <HomeTestimonials />
+    <HomeContact />
   </div>
 </template>
