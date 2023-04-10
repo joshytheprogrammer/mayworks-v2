@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <!-- Leave contract execution to us! Our legal experts handle it all, from drafting and negotiating to managing and executing contracts. One-time or ongoing, we've got you covered across all industries. -->
     <AppNavStrip />
     <AppNavBar v-show="!isMobile" />
     <AppNavMBar v-show="isMobile" />
