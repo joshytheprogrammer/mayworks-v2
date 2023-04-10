@@ -3,5 +3,6 @@
     <HomeJumbotron />
     <HomeAbout />
     <HomeServices />
+    <HomeTestimonials />
   </div>
 </template>
