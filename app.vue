@@ -5,7 +5,7 @@
     <AppNavBar v-show="!isMobile" />
     <AppNavMBar v-show="isMobile" />
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage class="mt-24 md:mt-0" />
     </NuxtLayout>
   </div>
 </template>
