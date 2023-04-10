@@ -46,7 +46,8 @@
         <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Name">
         <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email">
         <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone">
-        <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-48 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..."></textarea>
+        <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-36 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..."></textarea>
+        <button class="px-8 py-4 bg-gradient-to-l hover:bg-gradient-to-r from-blue-500 to-blue-700">Submit Now</button>
       </form>
     </div>
   </div>
