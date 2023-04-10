@@ -12,8 +12,8 @@
       <NuxtLink class="pl-8 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/#services">Services</NuxtLink>
       <NuxtLink class="pl-8 no-underline font-medium hover:text-blue-900 hover:ease hover:duration-100 hover:delay-75" to="/#contact">Contact</NuxtLink>
     </div>
-    <div class="btn">
-      <NuxtLink class="bg-blue-900 py-4 px-4 sm:px-8 text-white" to="/#contact">Get a Quote</NuxtLink>
+    <div class="btn md:hidden lg:block">
+      <NuxtLink class="bg-blue-900 py-4 px-4 sm:px-8  text-white" to="/#contact">Get a Quote</NuxtLink>
     </div>
   </div>
 </template>
