@@ -42,8 +42,11 @@
     </div>
     <div class="w-full sm:w-fit md:w-[49%] lg:w-1/3 md:px-8">
       <h2 class="text-4xl leading-snug font-semibold">Get in Touch</h2>
-      <form class="form">
-
+      <form class="py-4">
+        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Name">
+        <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email">
+        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone">
+        <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..."></textarea>
       </form>
     </div>
   </div>
