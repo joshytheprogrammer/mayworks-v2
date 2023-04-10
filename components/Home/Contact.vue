@@ -8,7 +8,7 @@
       <p class="py-4 leading-7 text-neutral-200">Get in touch with Mayworks today! Our team is always ready to assist you with your needs. </p>
       <div class="flex flex-col">
         <div class="w-full flex py-4">
-          <span class="pr-2"> 
+          <span class="pr-4"> 
             <Icon name="fluent-emoji-high-contrast:office-building" size="2.5em" /> 
           </span>
           <div class="">
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="w-full flex py-4">
-          <span class="pr-2"> 
+          <span class="pr-4"> 
             <Icon name="material-symbols:call" size="2.5em" /> 
           </span>
           <div class="">
@@ -28,12 +28,14 @@
           </div>
         </div>
         <div class="w-full flex py-4">
-          <span class="pr-2"> 
-            <Icon name="fluent-emoji-high-contrast:office-building" size="2.5em" /> 
+          <span class="pr-4"> 
+            <Icon name="mdi:clock-time-three" size="2.5em" /> 
           </span>
           <div class="">
             <h2 class="font-medium text-xl">Office Location</h2>
-            <p class="text-base text-neutral-200">1 Joseph Street, Lagos Island, 102273,  Lagos, Nigeria</p>
+            <p class="text-base text-neutral-200">
+              Mon-Fri: 10:00 - 17:00 <br> Sat-Sun: Weekend
+            </p>
           </div>
         </div>
       </div>
