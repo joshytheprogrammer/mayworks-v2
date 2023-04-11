@@ -3,10 +3,10 @@
     <div class="max-w-md">
       <NuxtLink class="flex items-center pb-4" to="/">
         <img class="w-24 pr-4" src="https://res.cloudinary.com/dsgvwxygr/image/upload/v1681085600/mayworks/mayworks-logo_yl8hzn.png" alt="Mayworks Logo">
-        <span class="text-3xl text-blue-900 font-bold">UACEF</span>
+        <span class="text-3xl text-blue-900 font-bold">Mayworks</span>
       </NuxtLink>
       <p class="py-8 text-sm leading-7 lg:pb-12 md:w-full">
-        After several changes, the forum finally settled for 26th - 28th December as the date for the annual city wide crusade. Several seasoned ministers have mounted the podium to speak on our lives and the land which have given rise to thousands of souls being worn yearly into the kingdom. Speakers like Rev. Prof Moses Madugba(International president, Ministers prayer network), Rev Dr. Charles Osueke(former GS Assemblies of God international), Bishop E.O.Ikeakor(Bishop Amichi Diocese Anglican communion), Witness Ken Paul Obieke, Rev Dr Emma Ifeadike, Evangelist Chinedu Nwejinaka etc
+        Mayworks is a dynamic and forward-thinking company founded in 2014 with a clear vision to help companies grow and thrive. Our journey began with the goal of exporting minerals from Nigeria to other countries such as the US, Uk, China, Canada and more. Over the years, we have grown and evolved, and today, our focus is on helping businesses of all sizes to overcome their challenges and achieve success.
       </p>
       <p class="py-1 text-sm leading-7">
         This website was designed and built by <a class="hover:underline hover:text-blue-900 font-medium" href="https://joshytheprogrammer.com">joshytheprogrammer</a>
