@@ -3,7 +3,7 @@
     <div class="text-sm items-center hidden md:block">
       <Icon name="material-symbols:mail" size="1.25em" />
       <span class="pl-1">
-        Email: site@mayworkslimited.com
+        Email: kingsleyn24@yahoo.com
       </span>
     </div>
     <div class="flex text-sm items-center">
