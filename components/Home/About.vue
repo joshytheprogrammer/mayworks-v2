@@ -6,13 +6,13 @@
       <h2 class="text-4xl leading-snug font-semibold ">Your trusted partner for business solutions and <span class="bg-gradient-to-l from-blue-700 to-blue-900 text-transparent bg-clip-text"> mineral exports</span></h2>
       <p class="py-8 leading-7 text-gray-600">Leave contract execution to us! Our legal experts handle it all, from drafting and negotiating to managing and executing contracts. One-time or ongoing, we've got you covered across all industries.</p>
       <div class="md:flex text-white">
-        <button class="mb-4 md:mb-0 md:mr-4 px-8 py-4 bg-gradient-to-l hover:bg-gradient-to-r from-blue-700 to-blue-900">Discover More</button>
-        <button class="inline-flex justify-center items-center px-8 py-4 bg-white text-black border border-blue-900">
+        <NuxtLink to="/#services" class=" inline-flex items-center no-underline mb-4 md:mb-0 md:mr-4 px-8 py-4 bg-gradient-to-l hover:bg-gradient-to-r from-blue-700 to-blue-900">Discover More</NuxtLink>
+        <a href="tel:08088985577" class="no-underline inline-flex justify-center items-center px-8 py-4 bg-white text-black border border-blue-900">
           <span class="text-white inline-flex items-center p-1 bg-blue-700 rounded-full">
             <Icon name="material-symbols:call" size="1.25em"/> 
           </span>
           <span class="pl-2">(234) 808 898 5577</span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
