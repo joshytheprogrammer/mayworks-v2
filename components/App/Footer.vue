@@ -51,7 +51,7 @@
       <ul class="py-8">
         <li class="pb-8 ">
           <Icon class="pr-1 text-blue-900" name="material-symbols:phone-in-talk" size="1.25em" />
-          <span class="pr-4 w-80 block">
+          <span class="pr-4 w-80">
             +234 808 898 5577
           </span>
         </li>
