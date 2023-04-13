@@ -30,7 +30,7 @@
       <h3 class="text-3xl font-semibold pb-4 text-blue-900">Useful Links</h3>
       <ul class="py-8">
         <li class="pb-8">
-          <NuxtLink class="hover:underline hover:text-blue-900 font-medium" to="/#">Home</NuxtLink>
+          <NuxtLink class="hover:underline hover:text-blue-900 font-medium" to="/#top">Home</NuxtLink>
         </li>
         <li class="pb-8">
           <NuxtLink class="hover:underline hover:text-blue-900 font-medium" to="/#about">About us</NuxtLink>
