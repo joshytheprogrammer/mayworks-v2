@@ -32,9 +32,9 @@
             <Icon name="mdi:clock-time-three" size="2.5em" /> 
           </span>
           <div class="">
-            <h2 class="font-medium text-xl">Office Location</h2>
+            <h2 class="font-medium text-xl">Office Hours</h2>
             <p class="text-base text-neutral-200">
-              Mon-Fri: 10:00 - 17:00 <br> Sat-Sun: Weekend
+              Mon-Fri: 10:00 - 17:00 <br> Sat: 12:00 - 16:00
             </p>
           </div>
         </div>
