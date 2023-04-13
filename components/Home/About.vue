@@ -1,6 +1,6 @@
 <template>
   <div class="py-8 px-4 sm:px-8 md:px-12 lg:px-28 lg:py-32 lg:flex justify-between items-center bg-blue-100">
-    <img class="w-full lg:w-1/2 h-[480px] object-contain lg:h-[640px]" src="https://images.unsplash.com/photo-1514222709107-a180c68d72b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="people working - about us">
+    <img class="w-fit lg:w-1/2 h-[480px] object-contain lg:h-[640px]" src="https://images.unsplash.com/photo-1514222709107-a180c68d72b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" alt="people working - about us">
     <div class="lg:w-1/2 lg:pl-8">
       <h2 id="about" class="py-4 font-medium text-blue-900 ">ABOUT US</h2>
       <h2 class="text-4xl leading-snug font-semibold ">Your trusted partner for business solutions and <span class="bg-gradient-to-l from-blue-700 to-blue-900 text-transparent bg-clip-text"> mineral exports</span></h2>
