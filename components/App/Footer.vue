@@ -26,7 +26,7 @@
         </li>
       </ul>
     </div>
-    <div class="flex flex-col justify-between sm:px-4">
+    <div class="flex flex-col justify-between">
       <h3 class="text-3xl font-semibold pb-4 text-blue-900">Links</h3>
       <ul class="py-8">
         <li class="pb-8">
