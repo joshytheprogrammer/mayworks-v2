@@ -27,7 +27,7 @@
       </ul>
     </div>
     <div class="flex flex-col justify-between sm:px-4">
-      <h3 class="text-3xl font-semibold pb-4 text-blue-900">Useful Links</h3>
+      <h3 class="text-3xl font-semibold pb-4 text-blue-900">Links</h3>
       <ul class="py-8">
         <li class="pb-8">
           <NuxtLink class="hover:underline hover:text-blue-900 font-medium" to="/#top">Home</NuxtLink>
@@ -61,7 +61,7 @@
         </li>
         <li class="pb-8">
           <Icon class="pr-1 text-blue-900"  name="material-symbols:location-on" size="1.25em" />
-          <span class="pr-4 w-80 block">1 Joseph Street, Lagos Island, 102273, Lagos, Nigeria</span>
+          <span class="pr-4 w-40 lg:w-80 block">1 Joseph Street, Lagos Island, 102273, Lagos, Nigeria</span>
         </li>
       </ul>
     </div>
