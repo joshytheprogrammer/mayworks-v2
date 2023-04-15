@@ -44,7 +44,7 @@
       <h2 class="text-4xl leading-snug font-semibold">Get in Touch</h2>
       <form @submit.prevent="sendEmail()" class="py-4">
         <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Name" v-model="form.name" required>
-        <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email (for response)" v-model="form.email" required>
+        <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email (We wll reach out here)" v-model="form.email" required>
         <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone" v-model="form.phone" required>
         <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-36 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..." v-model="form.message" required></textarea>
         <button class="px-8 py-4 bg-blue-700">Submit Now</button>
@@ -68,17 +68,14 @@
     },
     methods: {
       sendEmail() {
-        $emailjs.send("service_g5cvd17", "template_cc7mvrm", {
+        let template_params = {
           to_name: "Mr. Kingsley",
           reply_to: this.form.email,
           from_name: this.form.name,
           message: this.form.message + ' reach out to me @ '+ this.form.phone
-        })
-        .then(function(response) {
-          console.log("SUCCESS", response);
-        }, function(error) {
-          console.log("FAILED", error);
-        });
+        }
+
+        this.$sendEmail(template_params)
       }
     }
   }
