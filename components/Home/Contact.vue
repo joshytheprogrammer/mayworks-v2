@@ -47,7 +47,9 @@
         <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email (We wll reach out here)" v-model="form.email" required>
         <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone" v-model="form.phone" required>
         <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-36 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..." v-model="form.message" required></textarea>
-        <button class="px-8 py-4 bg-blue-700">Submit Now</button>
+        <AppNotification :show="showNotification" @close="closeNotification" />
+        <p class="bg-red-800 text-sm rounded-sm px-1 mb-1" v-for="error in errors">{{ error + '...' }}</p>
+        <button class="px-8 py-4 bg-blue-700 disabled:cursor-wait disabled:text-slate-200" :disabled="loading"> {{ loading ? 'loading...' : 'Submit Now' }} </button>
       </form>
     </div>
   </div>
@@ -63,19 +65,84 @@
           phone: '',
           message: ''
         },
-        valid: false
+        errors: {},
+        loading: false,
+        showNotification: false
       }
     },
     methods: {
-      sendEmail() {
+      async sendEmail() {
+        this.loading = true
+
         let template_params = {
           to_name: "Mr. Kingsley",
           reply_to: this.form.email,
           from_name: this.form.name,
-          message: this.form.message + ' reach out to me @ '+ this.form.phone
+          message: this.form.message + ' My phone number is - '+ this.form.phone
         }
 
-        this.$sendEmail(template_params)
+        if(this.validateForm()) {
+          // await this.$sendEmail(template_params)
+
+          this.showNotification = true;
+
+          setTimeout(() => {
+            this.showNotification = false;
+          }, 5000)
+        }
+
+        this.loading = false
+        return
+      },
+      closeNotification() {
+        this.showNotification = false;
+      },
+      validateForm() {
+        let valid = true;
+    
+        // Validate name field
+        if (!this.form.name) {
+          valid = false;
+          this.errors.name = 'Please enter your name';
+        }
+    
+        // Validate email field
+        if (!this.form.email) {
+          valid = false;
+          this.errors.email = 'Please enter your email';
+        } else if (!this.validateEmail(this.form.email)) {
+          valid = false;
+          this.errors.email = 'Please enter a valid email';
+        }
+    
+        // Validate phone field
+        if (!this.form.phone) {
+          valid = false;
+          this.errors.phone = 'Please enter your phone number';
+        } else if (!this.validatePhone(this.form.phone)) {
+          valid = false;
+          this.errors.phone = 'Please enter a valid Nigerian phone number';
+        }
+    
+        // Validate message field
+        if (!this.form.message) {
+          valid = false;
+          this.errors.message = 'Please enter a message';
+        }
+    
+        return valid;
+      },
+    
+      validateEmail(email) {
+        // Use a regular expression to validate email format
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      },
+    
+      validatePhone(phone) {
+        // Use a regular expression to validate Nigerian phone format
+        const regex = /^(\+?234|0)[7-9](0|1)[0-9]{8}$/;
+        return regex.test(phone);
       }
     }
   }
