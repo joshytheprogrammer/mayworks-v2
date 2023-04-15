@@ -52,3 +52,22 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    methods: {
+      sendEmail() {
+        $emailjs.send("gmail", "template_name", {
+          to_name: "Recipient Name",
+          from_name: "Your Name",
+          message: "Email message"
+        })
+        .then(function(response) {
+          console.log("SUCCESS", response);
+        }, function(error) {
+          console.log("FAILED", error);
+        });
+      }
+    }
+  }
+</script>
