@@ -42,13 +42,108 @@
     </div>
     <div class="w-full sm:w-fit md:w-[49%] lg:w-1/3 md:px-8">
       <h2 class="text-4xl leading-snug font-semibold">Get in Touch</h2>
-      <form class="py-4">
-        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Name">
-        <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email">
-        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone">
-        <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-36 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..."></textarea>
-        <button class="px-8 py-4 bg-blue-700">Submit Now</button>
+      <form @submit.prevent="sendEmail()" class="py-4">
+        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Name" v-model="form.name" required>
+        <input class="bg-blue-500 w-full px-4 my-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Email (We wll reach out here)" v-model="form.email" required>
+        <input class="bg-blue-500 w-full px-4 h-12 placeholder:text-slate-200 outline-0" type="text" placeholder="Phone" v-model="form.phone" required>
+        <textarea class="bg-blue-500 w-full px-4 py-4 my-4 h-36 placeholder:text-slate-200 outline-0" type="text" placeholder="Write your message here..." v-model="form.message" required></textarea>
+        <AppNotification :show="showNotification" @close="closeNotification" />
+        <p class="bg-red-800 text-sm rounded-sm px-1 mb-1" v-for="error in errors">{{ error + '...' }}</p>
+        <button class="px-8 py-4 bg-blue-700 disabled:cursor-wait disabled:text-slate-200" :disabled="loading"> {{ loading ? 'loading...' : 'Submit Now' }} </button>
       </form>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        form: {
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        },
+        errors: {},
+        loading: false,
+        showNotification: false
+      }
+    },
+    methods: {
+      async sendEmail() {
+        this.loading = true
+
+        let template_params = {
+          to_name: "Mr. Kingsley",
+          reply_to: this.form.email,
+          from_name: this.form.name,
+          message: this.form.message + ' My phone number is - '+ this.form.phone
+        }
+
+        if(this.validateForm()) {
+          // await this.$sendEmail(template_params)
+
+          this.showNotification = true;
+
+          setTimeout(() => {
+            this.showNotification = false;
+          }, 5000)
+        }
+
+        this.loading = false
+        return
+      },
+      closeNotification() {
+        this.showNotification = false;
+      },
+      validateForm() {
+        let valid = true;
+    
+        // Validate name field
+        if (!this.form.name) {
+          valid = false;
+          this.errors.name = 'Please enter your name';
+        }
+    
+        // Validate email field
+        if (!this.form.email) {
+          valid = false;
+          this.errors.email = 'Please enter your email';
+        } else if (!this.validateEmail(this.form.email)) {
+          valid = false;
+          this.errors.email = 'Please enter a valid email';
+        }
+    
+        // Validate phone field
+        if (!this.form.phone) {
+          valid = false;
+          this.errors.phone = 'Please enter your phone number';
+        } else if (!this.validatePhone(this.form.phone)) {
+          valid = false;
+          this.errors.phone = 'Please enter a valid Nigerian phone number';
+        }
+    
+        // Validate message field
+        if (!this.form.message) {
+          valid = false;
+          this.errors.message = 'Please enter a message';
+        }
+    
+        return valid;
+      },
+    
+      validateEmail(email) {
+        // Use a regular expression to validate email format
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      },
+    
+      validatePhone(phone) {
+        // Use a regular expression to validate Nigerian phone format
+        const regex = /^(\+?234|0)[7-9](0|1)[0-9]{8}$/;
+        return regex.test(phone);
+      }
+    }
+  }
+</script>
