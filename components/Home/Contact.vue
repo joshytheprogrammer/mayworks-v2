@@ -76,13 +76,14 @@
 
         let template_params = {
           to_name: "Mr. Kingsley",
+          to_email: "kingsleyn24@yahoo.com",
           reply_to: this.form.email,
           from_name: this.form.name,
           message: this.form.message + ' My phone number is - '+ this.form.phone
         }
 
         if(this.validateForm()) {
-          // await this.$sendEmail(template_params)
+          await this.$sendEmail(template_params)
 
           this.showNotification = true;
 
